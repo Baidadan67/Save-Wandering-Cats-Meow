@@ -6,11 +6,11 @@
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 51.0
-height = 40.0
+height = 12.0
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 38.0
-height = 28.0
+radius = 32.0
+height = 6.0
 
 [node name="CatOutdoor" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -29,3 +29,5 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[connection signal="area_entered" from="CatchArea" to="." method="_on_CatchArea_area_entered"]

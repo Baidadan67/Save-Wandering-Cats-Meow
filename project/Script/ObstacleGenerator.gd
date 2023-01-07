@@ -14,7 +14,7 @@ func _ready():
 	for i in range(maxObstacle): 
 		randomize() 
 		var obstacle = obstacleScene.instance()
-		obstacle.global_position.x = hSize * (randi() % (1024 / hSize))
+		obstacle.global_position.x = 212 + hSize * (randi() % (600 / hSize))
 		obstacle.global_position.y = vSize * (randi() % (600 / vSize))
 		print(obstacle.global_position.x, ' ', obstacle.global_position.y)
 		add_child(obstacle)
