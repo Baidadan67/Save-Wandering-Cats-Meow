@@ -19,12 +19,12 @@ texture = ExtResource( 4 )
 position = Vector2( 284, 536 )
 
 [node name="Cat" parent="." instance=ExtResource( 3 )]
-
 position = Vector2( 500, 300 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="ExitOutdoor" parent="." instance=ExtResource( 5 )]
 position = Vector2( 53, 544 )
 
 [node name="CatchCounter" parent="." instance=ExtResource( 6 )]
 position = Vector2( 865, 39 )
-

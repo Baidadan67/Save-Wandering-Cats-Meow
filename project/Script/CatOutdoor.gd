@@ -26,13 +26,17 @@ func _physics_process(delta):
 	match state:
 		HIDDING:
 			var direction = position.direction_to(player_position)
-			if position.x ==  BOARDER[0] + SIZE[0] / 2 || position.x ==  BOARDER[0] - SIZE[0] / 2:
+			if position.x ==  BOARDER[0] + SIZE[0] / 2:
+				print("up")
 				direction.x = - direction.x
 			elif position.x ==  BOARDER[0] - SIZE[0] / 2:
+				print("down")
 				direction.x = - direction.x
 			if position.y == BOARDER[2] + SIZE[0] / 2:
+				print("left")
 				direction.y = - direction.y
 			elif position.y == BOARDER[2] - SIZE[0] / 2:
+				print("right")
 				direction.y = - direction.y
 			direction = - direction
 			velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
@@ -44,7 +48,6 @@ func _physics_process(delta):
 
 func _on_CatchArea_body_entered(body):
 	if body.name == "Player":
-		print("new")
 		state = HIDDING
 		player_position = body.position
 

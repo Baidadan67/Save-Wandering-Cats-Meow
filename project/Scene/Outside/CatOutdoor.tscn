@@ -10,7 +10,6 @@ height = 58.0
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 27.0
-
 height = 0.0
 
 [node name="CatOutdoor" type="KinematicBody2D"]
