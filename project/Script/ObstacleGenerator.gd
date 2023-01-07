@@ -1,6 +1,6 @@
 extends Node2D
 
-var maxObstacle = 5
+var maxObstacle = 10
 var obstacleScene = load("res://Scene/Outside/Obstacle.tscn")
 var vSize = 64 
 var hSize = 64 
