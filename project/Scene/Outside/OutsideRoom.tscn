@@ -14,7 +14,7 @@ texture = ExtResource( 4 )
 [node name="ObstacleGenerator" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 284, 537 )
+position = Vector2( 284, 536 )
 
 [node name="Cat" parent="." instance=ExtResource( 3 )]
-position = Vector2( 512, 299 )
+position = Vector2( 500, 300 )

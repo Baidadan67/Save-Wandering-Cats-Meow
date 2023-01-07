@@ -6,11 +6,11 @@
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 51.0
-height = 12.0
+height = 10.0
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 32.0
-height = 6.0
+height = 0.0
 
 [node name="CatOutdoor" type="KinematicBody2D"]
 script = ExtResource( 1 )
