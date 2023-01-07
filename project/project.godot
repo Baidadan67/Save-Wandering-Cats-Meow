@@ -14,6 +14,10 @@ config/name="Save Wandering Cats"
 run/main_scene="res://Scene/Outside/OutsideRoom.tscn"
 config/icon="res://Sprite/icon.png"
 
+[display]
+
+window/size/resizable=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
