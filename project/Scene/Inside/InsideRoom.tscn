@@ -1,3 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scene/Inside/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Inside/door.tscn" type="PackedScene" id=2]
 
 [node name="InsideRoom" type="Node2D"]
+position = Vector2( 1, 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, 178 )
+
+[node name="door" parent="." instance=ExtResource( 2 )]
+position = Vector2( 858, 421 )
