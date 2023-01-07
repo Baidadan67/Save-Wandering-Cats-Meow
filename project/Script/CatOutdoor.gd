@@ -27,16 +27,16 @@ func _physics_process(delta):
 		HIDDING:
 			var direction = position.direction_to(player_position)
 			if position.x ==  BOARDER[0] + SIZE[0] / 2:
-				print("up")
+				# print("up")
 				direction.x = - direction.x
 			elif position.x ==  BOARDER[0] - SIZE[0] / 2:
-				print("down")
+				# print("down")
 				direction.x = - direction.x
 			if position.y == BOARDER[2] + SIZE[0] / 2:
-				print("left")
+				# print("left")
 				direction.y = - direction.y
 			elif position.y == BOARDER[2] - SIZE[0] / 2:
-				print("right")
+				# print("right")
 				direction.y = - direction.y
 			direction = - direction
 			velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)

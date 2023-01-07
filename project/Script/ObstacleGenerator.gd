@@ -1,6 +1,6 @@
 extends Node2D
 
-var maxObstacle = 10
+var maxObstacle = 20
 var obstacleScene = load("res://Scene/Outside/Obstacle.tscn")
 
 # Called when the node enters the scene tree for the first time.
