@@ -18,3 +18,4 @@ position = Vector2( 284, 537 )
 
 [node name="Cat" parent="." instance=ExtResource( 3 )]
 position = Vector2( 512, 299 )
+collision_layer = 1
