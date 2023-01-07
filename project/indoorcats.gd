@@ -21,6 +21,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	 # The player's movement vector.
+	if position.x == 0 or position.x == screen_size.x or position.y == 0 or position.y == screen_size.y:
+		velocity.x = rng.randf_range(-1.0,1.0)
+		velocity.y = rng.randf_range(-1.0,1.0)
 	if frame_count <= 0:
 		velocity.x = rng.randf_range(-1.0,1.0)
 		velocity.y = rng.randf_range(-1.0,1.0)
@@ -36,6 +39,8 @@ func _process(delta):
 	else:
 		$AnimatedSprite.stopp()
 	position += velocity * delta
+	
+		
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
 	if velocity.x < 0:
