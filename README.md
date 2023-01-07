@@ -7,4 +7,4 @@ Contributers:
 
 |name|github|discord|
 |---|---|---|
-|Hongyang bai|Baidadan67|Baidadan#2794|
+|Hongyang Bai|Baidadan67|Baidadan#2794|
