@@ -4,8 +4,7 @@
 [ext_resource path="res://Sprite/icon.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 30.0
-height = 0.0
+radius = 24.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
