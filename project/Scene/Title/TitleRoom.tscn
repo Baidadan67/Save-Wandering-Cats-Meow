@@ -10,7 +10,7 @@ position = Vector2( -5, -2 )
 script = ExtResource( 3 )
 mainGamesence = ExtResource( 2 )
 
-[node name="鸭子1" type="Sprite" parent="."]
+[node name="startpage" type="Sprite" parent="."]
 position = Vector2( 509, 303 )
 scale = Vector2( 0.714583, 0.603704 )
 texture = ExtResource( 1 )
