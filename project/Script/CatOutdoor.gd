@@ -22,25 +22,22 @@ func _ready():
 #	pass
 
 func _physics_process(delta):
-	
+	var direction
 	match state:
 		HIDDING:
-			var direction = position.direction_to(player_position)
-			if position.x ==  BOARDER[0] + SIZE[0] / 2:
-				print("up")
-				direction.x = - direction.x
-			elif position.x ==  BOARDER[0] - SIZE[0] / 2:
-				print("down")
-				direction.x = - direction.x
-			if position.y == BOARDER[2] + SIZE[0] / 2:
-				print("left")
-				direction.y = - direction.y
-			elif position.y == BOARDER[2] - SIZE[0] / 2:
-				print("right")
-				direction.y = - direction.y
+			direction = position.direction_to(player_position)
+			direction = leave_wall(position, direction)
 			direction = - direction
-			velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
+			velocity = velocity.move_toward(direction * 500, ACCELERATION * delta)
 			velocity = move_and_slide(velocity)
+			print(direction)
+		
+		WANDER:
+			direction = Vector2(rand_range(-1,1),rand_range(-1,1))
+			#direction = leave_wall(position,direction)
+			velocity = velocity.move_toward(direction * 200, ACCELERATION * delta)
+			velocity = move_and_slide(velocity)
+			
 
 	position.x = clamp(position.x, BOARDER[0] + SIZE[0] / 2, BOARDER[1] - SIZE[0] / 2)
 	position.y = clamp(position.y, BOARDER[2] + SIZE[0] / 2, BOARDER[3] - SIZE[0] / 2)
@@ -54,3 +51,13 @@ func _on_CatchArea_body_entered(body):
 func _on_CatchArea_body_exited(body):
 	state = WANDER
 
+func leave_wall(position, direction):
+	if position.x <  BOARDER[0] + SIZE[0] * 2:
+		direction.x = -1
+	elif position.x >  BOARDER[1] - SIZE[0] * 2:
+		direction.x = 1
+	if position.y < BOARDER[2] + SIZE[0] * 2:
+		direction.y = -1
+	elif position.y > BOARDER[3] - SIZE[0] * 2:
+		direction.y = 1
+	return direction
