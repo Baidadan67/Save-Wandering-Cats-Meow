@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/u=3324929796,399291786&fm=253&fmt=auto&app=138&f=JPEG.webp-dc449fc7f6d4532494789a41db0e4b3e.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Sprite/u=3324929796,399291786&fm=253&fmt=auto&app=138&f=JPEG.webp"
+dest_files=[ "res://.import/u=3324929796,399291786&fm=253&fmt=auto&app=138&f=JPEG.webp-dc449fc7f6d4532494789a41db0e4b3e.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

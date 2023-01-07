@@ -11,6 +11,8 @@ var pro = [0.3, 0.5, 1]
 var capture = false
 var counter = 50 
 var max_counter = 50 
+var captures = load("res://Scene/Outside/capture.tscn")
+var fails = load("res://Scene/Outside/Fail.tscn")
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -26,7 +28,10 @@ func _physics_process(delta):
 
 	position.x = clamp(position.x, BOARDER[0] + SIZE[0] / 2, BOARDER[1] - SIZE[0] / 2)
 	position.y = clamp(position.y, BOARDER[2] + SIZE[0] / 2, BOARDER[3] - SIZE[0] / 2)
-
+	
+	
+		
+		
 	for i in get_slide_count():
 			var collision = get_slide_collision(i)
 			# print(collision.collider.name) 
@@ -35,8 +40,13 @@ func _physics_process(delta):
 					if randf() <= pro[times]: 
 						print("caputure")
 						collision.collider.queue_free()
+						var capture = captures.instance()
+						add_child(capture)
+						
 					else:
 						print("fail")
+						var fail = fails.instance()
+						add_child(fail)
 					times += 1
 					print(times)
 					counter = 0
