@@ -6,7 +6,6 @@ const FRICTION = 500
 var velocity = Vector2.ZERO
 var times = 0
 var pro = [0.3, 0.5, 1]
-var capture = false
 var counter = 50 
 
 func _physics_process(delta):
