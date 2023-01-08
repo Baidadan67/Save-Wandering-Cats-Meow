@@ -32,14 +32,14 @@ func _physics_process(delta):
 	match state:
 		HIDDING:
 			direction = position.direction_to(player_position)
-			direction = leave_wall(position, direction)
 			direction = - direction
+			direction = leave_wall(position, direction)
 			velocity = velocity.move_toward(direction * 500, ACCELERATION * delta)
 			velocity = move_and_slide(velocity)
 			# print(direction)
 
 		WANDER:
-			#direction = leave_wall(position,direction)
+			direction = leave_wall(position,direction)
 			if timer == max_timer: 
 				direction = Vector2(rand_range(-1,1),rand_range(-1,1))
 				timer = 0
@@ -67,11 +67,11 @@ func _on_CatchArea_body_exited(body):
 
 func leave_wall(position, direction):
 	if position.x <  BOARDER[0] + SIZE[0] * 2:
-		direction.x = -1
-	elif position.x >  BOARDER[1] - SIZE[0] * 2:
 		direction.x = 1
+	elif position.x >  BOARDER[1] - SIZE[0] * 2:
+		direction.x = -1
 	if position.y < BOARDER[2] + SIZE[0] * 2:
-		direction.y = -1
-	elif position.y > BOARDER[3] - SIZE[0] * 2:
 		direction.y = 1
+	elif position.y > BOARDER[3] - SIZE[0] * 2:
+		direction.y = -1
 	return direction
