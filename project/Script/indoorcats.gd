@@ -16,6 +16,12 @@ func _ready():
 	rng.randomize()
 	frame_count = 0
 	randomize()
+	
+		#$AnimatedSprite.animation = "cat0"
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	 # The player's movement vector.
 	if color == '1':
 		$AnimatedSprite.animation = "cat1"
 	elif color == '2':
@@ -26,10 +32,8 @@ func _ready():
 		$AnimatedSprite.animation = "cat4"
 	elif color == '5':
 		$AnimatedSprite.animation = "cat5"
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	 # The player's movement vector.
+	else:
+		pass
 	if position.x == 0 or position.x == screen_size.x or position.y == 0 or position.y == screen_size.y:
 		velocity.x = rng.randf_range(-1.0,1.0)
 		velocity.y = rng.randf_range(-0.3,0.3)

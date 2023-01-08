@@ -77,7 +77,9 @@ func save(color):
 	var file = File.new()
 	file.open("res://save_game.dat", File.READ_WRITE)
 	var content = file.get_as_text()
+	print("content is")
 	print(content)
-	file.store_line(color)
+	file.seek_end()
+	file.store_line("\n" + color)
 	file.close()
 	return
