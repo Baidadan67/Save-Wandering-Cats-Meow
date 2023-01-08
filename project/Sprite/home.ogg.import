@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/home.ogg-e82083a24877efed1e452b7d954f737d.oggstr"
+
+[deps]
+
+source_file="res://Sprite/home.ogg"
+dest_files=[ "res://.import/home.ogg-e82083a24877efed1e452b7d954f737d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
