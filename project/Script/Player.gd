@@ -29,7 +29,7 @@ func _physics_process(delta):
 	position.x = clamp(position.x, BOARDER[0] + SIZE[0] / 2, BOARDER[1] - SIZE[0] / 2)
 	position.y = clamp(position.y, BOARDER[2] + SIZE[0] / 2, BOARDER[3] - SIZE[0] / 2)
 	
-	
+
 		
 		
 	for i in get_slide_count():

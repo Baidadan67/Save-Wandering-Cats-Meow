@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fail.jpg-45a96a4be7655773c76878b8b51a5056.stex"
+path="res://.import/fail-removebg-preview.png-ec54b3983f5a45e41a98eb62ba631aaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/fail.jpg"
-dest_files=[ "res://.import/fail.jpg-45a96a4be7655773c76878b8b51a5056.stex" ]
+source_file="res://Sprite/fail-removebg-preview.png"
+dest_files=[ "res://.import/fail-removebg-preview.png-ec54b3983f5a45e41a98eb62ba631aaf.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
