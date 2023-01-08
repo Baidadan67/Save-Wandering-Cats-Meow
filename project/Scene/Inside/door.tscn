@@ -5,10 +5,10 @@
 [ext_resource path="res://Scene/Inside/scripts/door.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 13, 143 )
+extents = Vector2( 38.5, 67.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 37.5, 158.5 )
+extents = Vector2( 54.5, 77.5 )
 
 [node name="door" type="StaticBody2D"]
 script = ExtResource( 3 )
