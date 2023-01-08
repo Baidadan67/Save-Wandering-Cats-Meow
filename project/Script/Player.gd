@@ -15,6 +15,7 @@ var captures = load("res://Scene/Outside/capture.tscn")
 var fails = load("res://Scene/Outside/Fail.tscn")
 var file = File.new()
 
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") -  Input.get_action_strength("ui_left")
@@ -35,7 +36,7 @@ func _physics_process(delta):
 	position.x = clamp(position.x, BOARDER[0] + SIZE[0] / 2, BOARDER[1] - SIZE[0] / 2)
 	position.y = clamp(position.y, BOARDER[2] + SIZE[0] / 2, BOARDER[3] - SIZE[0] / 2)
 	
-	file.open('res://sprite/catchedcats.json',File.WRITE)
+	#file.open('res://sprite/catchedcats.json',File.WRITE)
 	for i in get_slide_count():
 			var collision = get_slide_collision(i)
 			# print(collision.collider.name) 
@@ -44,11 +45,12 @@ func _physics_process(delta):
 					if randf() <= pro[times]: 
 						print("caputure")
 						var data = collision.collider.get_node("AnimatedSprite").animation
-						print(data)
+						print(data[3])
 						var json = to_json(data)
 						print(json)
+						save(data[3])
 						#file.store_line(json)
-						file.close()
+						
 						collision.collider.queue_free()
 						captured = true
 						var capture = captures.instance()
@@ -70,3 +72,12 @@ func _physics_process(delta):
 		modulate.a = 0.5
 	else: 
 		modulate.a = 1
+
+func save(color):
+	var file = File.new()
+	file.open("res://save_game.dat", File.READ_WRITE)
+	var content = file.get_as_text()
+	print(content)
+	file.store_line(color)
+	file.close()
+	return
