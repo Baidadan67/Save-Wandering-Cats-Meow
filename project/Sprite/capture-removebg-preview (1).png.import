@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/capture (2).png-75ebb61799ff507edeb82081184e2397.stex"
+path="res://.import/capture-removebg-preview (1).png-c949342143bd5989bc28beca8dc96041.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/capture (2).png"
-dest_files=[ "res://.import/capture (2).png-75ebb61799ff507edeb82081184e2397.stex" ]
+source_file="res://Sprite/capture-removebg-preview (1).png"
+dest_files=[ "res://.import/capture-removebg-preview (1).png-c949342143bd5989bc28beca8dc96041.stex" ]
 
 [params]
 
