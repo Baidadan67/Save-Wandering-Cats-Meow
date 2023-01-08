@@ -5,7 +5,8 @@
 [ext_resource path="res://Scene/Inside/hurt_hit_box/hitbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 67.0
+radius = 74.0
+height = 0.0
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -26,7 +27,7 @@ region = Rect2( 472, 0, 236, 352 )
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "walk",
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -43,6 +44,5 @@ position = Vector2( -52, 18 )
 
 [node name="indoorPlayerAni" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-animation = "walk"
 frame = 1
 playing = true

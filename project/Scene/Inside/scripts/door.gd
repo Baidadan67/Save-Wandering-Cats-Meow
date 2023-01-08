@@ -12,6 +12,7 @@ var change_scene = false
 func _on_hurtbox_body_entered(body: PhysicsBody2D):
 	if body.name == "player":
 		change_scene = true
+		print("collide")
 
 func _on_hurtbox_body_exited(body):
 	change_scene = false

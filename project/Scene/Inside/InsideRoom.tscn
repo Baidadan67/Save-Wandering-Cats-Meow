@@ -18,6 +18,9 @@ texture = ExtResource( 4 )
 
 [node name="Window" parent="." instance=ExtResource( 5 )]
 position = Vector2( 707, 148 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 139, 404 )
