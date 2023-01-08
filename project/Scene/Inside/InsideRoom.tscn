@@ -20,4 +20,5 @@ position = Vector2( 136, 397 )
 position = Vector2( 1008, 364 )
 
 [node name="indoorobs" type="Node2D" parent="."]
+position = Vector2( 0, 1 )
 script = ExtResource( 3 )

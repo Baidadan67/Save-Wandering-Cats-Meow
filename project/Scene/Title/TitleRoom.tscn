@@ -96,12 +96,12 @@ margin_right = 48.0
 margin_bottom = 26.0
 text = "Back"
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/new_Button" to="." method="_on_new_Button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/new_Button" to="." method="_on_Button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer2/load_button" to="." method="_on_load_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/new_Button" to="." method="_on_new_Button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer2/load_button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer2/load_button" to="." method="_on_load_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer3/Instru_Button" to="." method="_on_Instru_Button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_new_Button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_quit_button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="Instru/MarginContainer/Button_return" to="." method="_on_Button_return_button_up"]
