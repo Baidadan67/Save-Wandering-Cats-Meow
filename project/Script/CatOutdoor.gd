@@ -13,6 +13,9 @@ enum {HIDDING, WANDER}
 var state = WANDER
 var player_position
 var spriteList = ["cat1", "cat2", "cat3", "cat4", "cat5"]
+var direction = Vector2(rand_range(-1,1),rand_range(-1,1))
+var timer = 50
+var max_timer = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,7 +29,6 @@ func _ready():
 #	pass
 
 func _physics_process(delta):
-	var direction
 	match state:
 		HIDDING:
 			direction = position.direction_to(player_position)
@@ -37,8 +39,12 @@ func _physics_process(delta):
 			# print(direction)
 
 		WANDER:
-			direction = Vector2(rand_range(-1,1),rand_range(-1,1))
 			#direction = leave_wall(position,direction)
+			if timer == max_timer: 
+				direction = Vector2(rand_range(-1,1),rand_range(-1,1))
+				timer = 0
+			else:
+				timer += 1 
 			velocity = velocity.move_toward(direction * 200, ACCELERATION * delta)
 			velocity = move_and_slide(velocity)
 

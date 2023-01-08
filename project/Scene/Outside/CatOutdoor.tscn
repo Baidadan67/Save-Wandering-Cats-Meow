@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Script/CatOutdoor.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/cat1_temp.png" type="Texture" id=2]
@@ -106,11 +106,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 49.0
-height = 58.0
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 27.0
+radius = 102.0
 height = 0.0
 
 [node name="CatOutdoor" type="KinematicBody2D"]
@@ -133,9 +129,8 @@ shape = SubResource( 2 )
 [node name="wanderController" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1 )
-shape = SubResource( 1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -48, -37, -29, -1, -1, -13, 20, -12, 26, -22, 27, -30, 35, -25, 42, -30, 43, -23, 48, -12, 49, -2, 38, 2, 33, 13, 34, 25, 35, 31, 21, 19, 19, 29, 12, 21, -12, 24, -10, 33, -20, 24, -27, 30, -32, 0, -52, -35 )
 
 [connection signal="area_entered" from="CatchArea" to="." method="_on_CatchArea_area_entered"]
 [connection signal="body_entered" from="CatchArea" to="." method="_on_CatchArea_body_entered"]
