@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scene/Inside/scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://Sprite/icon.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Inside/hurt_hit_box/hitbox.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 41.0
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( 181, 191 )
+script = ExtResource( 1 )
+
+[node name="player" type="Sprite" parent="."]
+position = Vector2( 2.99998, -5 )
+scale = Vector2( 1.28125, 1.29688 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4, -6 )
+shape = SubResource( 1 )
+
+[node name="hitbox" parent="." instance=ExtResource( 3 )]
