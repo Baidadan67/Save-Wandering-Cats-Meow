@@ -116,6 +116,7 @@ position = Vector2( -1.90735e-06, 0 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "cat1"
+frame = 2
 playing = true
 offset = Vector2( 1.52588e-05, 0 )
 
