@@ -53,6 +53,7 @@ shape = SubResource( 1 )
 position = Vector2( -52, 18 )
 
 [node name="indoorPlayerAni" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 5 )
 animation = "still"
 playing = true
