@@ -1,6 +1,44 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
+[ext_resource path="res://Sprite/player-removebg-preview.png" type="Texture" id=2]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 24.0
+height = 0.0
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 236, 352 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 236, 0, 236, 352 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 472, 0, 236, 352 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 5
 script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -4, -4 )
+scale = Vector2( 0.372881, 0.25 )
+frames = SubResource( 5 )
+playing = true
