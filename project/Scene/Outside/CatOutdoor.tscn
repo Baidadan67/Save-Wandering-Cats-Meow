@@ -108,7 +108,6 @@ script = ExtResource( 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 7 )
 animation = "cat5"
-frame = 2
 playing = true
 
 [node name="CatchArea" type="Area2D" parent="."]

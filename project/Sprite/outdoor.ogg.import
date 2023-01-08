@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/outdoor.ogg-71e30987e79433633122f674a9db6707.oggstr"
+
+[deps]
+
+source_file="res://Sprite/outdoor.ogg"
+dest_files=[ "res://.import/outdoor.ogg-71e30987e79433633122f674a9db6707.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
