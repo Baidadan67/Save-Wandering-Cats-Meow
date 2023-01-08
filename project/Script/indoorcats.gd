@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+var color
 export var speed = 100 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 export var velocity = Vector2.ZERO
@@ -42,7 +42,7 @@ func _process(delta):
 	
 		
 	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+	position.y = clamp(position.y, screen_size.y/2, screen_size.y)
 	if velocity.x < 0:
 		$AnimatedSprite.flip_h = true
 	else:

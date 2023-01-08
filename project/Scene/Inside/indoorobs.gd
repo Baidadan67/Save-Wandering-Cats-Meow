@@ -23,7 +23,8 @@ func load_file(file, screen_size):
 		print(line)
 		var cat = obscats.instance()
 		cat.position.x = rng.randi_range(0,screen_size.x) 
-		cat.position.y = rng.randi_range(0,screen_size.y)
+		cat.position.y = rng.randi_range(screen_size.y/2,screen_size.y)
+		
 		#print(rng.randi_range(0,screen_size.x))
 		add_child(cat)
 	f.close()
