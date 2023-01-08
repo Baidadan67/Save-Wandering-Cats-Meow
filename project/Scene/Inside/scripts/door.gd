@@ -13,7 +13,8 @@ func _on_hurtbox_body_entered(body: PhysicsBody2D):
 	change_scene = true
 
 func _on_hurtbox_body_exited(body):
-	change_scene = false
+	if body.name == "player":
+		change_scene = false
 	
 func _process(delta):
 	if change_scene == true:
