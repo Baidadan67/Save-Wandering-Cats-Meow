@@ -26,7 +26,15 @@ func _physics_process(delta):
 		get_node("AnimatedSprite").set_flip_h(true)
 	else: 
 		get_node("AnimatedSprite").set_flip_h(false)
-	
+		
+	if velocity.x != 0:
+		$AnimatedSprite.scale.x = 0.25
+		$AnimatedSprite.scale.y = 0.25
+		$AnimatedSprite.animation = "walk"
+	else:
+		$AnimatedSprite.scale.x = 0.37
+		$AnimatedSprite.scale.y = 0.37
+		$AnimatedSprite.animation = "still"
 	if input_vector != Vector2.ZERO:
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:

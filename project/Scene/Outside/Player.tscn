@@ -1,11 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/player-removebg-preview.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/player_still.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 20.0
 height = 24.0
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 582, 0, 194, 320 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
@@ -21,9 +27,14 @@ region = Rect2( 472, 0, 236, 352 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "still",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "default",
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -36,7 +47,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -1, -2 )
-scale = Vector2( 0.25, 0.252841 )
+scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 5 )
-frame = 1
+animation = "still"
 playing = true

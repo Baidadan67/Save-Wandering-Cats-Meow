@@ -1,33 +1,41 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Inside/scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/player-removebg-preview.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Inside/hurt_hit_box/hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprite/player_still.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 74.0
 height = 0.0
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 582, 0, 194, 320 )
+
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 236, 352 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 236, 0, 236, 352 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 472, 0, 236, 352 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "still",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "default",
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -44,5 +52,5 @@ position = Vector2( -52, 18 )
 
 [node name="indoorPlayerAni" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 1
+animation = "still"
 playing = true

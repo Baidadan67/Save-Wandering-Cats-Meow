@@ -28,7 +28,14 @@ func player_move(delta):
 	move_and_collide(velocity * delta)
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 2*(screen_size.y)/3, 3*(screen_size.y)/4)
-	$indoorPlayerAni.animation = "walk"
+	if velocity.x != 0:
+		$indoorPlayerAni.scale.x = 1.0
+		$indoorPlayerAni.scale.y = 1.0
+		$indoorPlayerAni.animation = "walk"
+	else:
+		$indoorPlayerAni.scale.x = 1.45
+		$indoorPlayerAni.scale.y = 1.45
+		$indoorPlayerAni.animation = "still"
 	if velocity.x > 0:
 		$indoorPlayerAni.flip_h = true
 	else:
