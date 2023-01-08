@@ -16,11 +16,7 @@ config/icon="res://Sprite/icon.png"
 
 [display]
 
-
- 
-
 window/size/resizable=false
-
 
 [gui]
 

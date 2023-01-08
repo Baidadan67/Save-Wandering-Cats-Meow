@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprite/鸭子1.jpg" type="Texture" id=1]
 [ext_resource path="res://Scene/Inside/InsideRoom.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Title/TitleRoom.gd" type="Script" id=3]
-[ext_resource path="res://Sprite/sb4.jpg" type="Texture" id=4]
+[ext_resource path="res://Sprite/instru.png" type="Texture" id=4]
 
 [node name="TitleRoom" type="Node2D"]
 position = Vector2( -5, -2 )
@@ -80,17 +80,29 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Quit"
 
-[node name="Sb4" type="Sprite" parent="."]
+[node name="Instru" type="Sprite" parent="."]
 visible = false
-position = Vector2( 514, 303 )
-scale = Vector2( 0.491, 0.394 )
+position = Vector2( 526, 303 )
+scale = Vector2( 1.16268, 1.17667 )
 texture = ExtResource( 4 )
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/new_Button" to="." method="_on_Button_button_up"]
+[node name="MarginContainer" type="MarginContainer" parent="Instru"]
+margin_left = -131.0
+margin_top = -178.0
+margin_right = -83.0
+margin_bottom = -152.0
+
+[node name="Button_return" type="Button" parent="Instru/MarginContainer"]
+margin_right = 48.0
+margin_bottom = 26.0
+text = "Back"
+
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/new_Button" to="." method="_on_new_Button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer2/load_button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/new_Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer2/load_button" to="." method="_on_load_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer2/load_button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer3/Instru_Button" to="." method="_on_Instru_Button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_Button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_quit_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_new_Button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_quit_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer4/quit_button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Instru/MarginContainer/Button_return" to="." method="_on_Button_return_button_up"]
