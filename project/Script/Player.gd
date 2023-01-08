@@ -19,6 +19,11 @@ func _physics_process(delta):
 	input_vector.x = Input.get_action_strength("ui_right") -  Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") -  Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
+
+	if input_vector.x > 0: 
+		get_node("AnimatedSprite").set_flip_h(true)
+	else: 
+		get_node("AnimatedSprite").set_flip_h(false)
 	
 	if input_vector != Vector2.ZERO:
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
@@ -28,10 +33,7 @@ func _physics_process(delta):
 
 	position.x = clamp(position.x, BOARDER[0] + SIZE[0] / 2, BOARDER[1] - SIZE[0] / 2)
 	position.y = clamp(position.y, BOARDER[2] + SIZE[0] / 2, BOARDER[3] - SIZE[0] / 2)
-	
 
-		
-		
 	for i in get_slide_count():
 			var collision = get_slide_collision(i)
 			# print(collision.collider.name) 

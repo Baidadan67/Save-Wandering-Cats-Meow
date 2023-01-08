@@ -1,37 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Script/CatOutdoor.gd" type="Script" id=1]
-[ext_resource path="res://Sprite/cat_temp.png" type="Texture" id=2]
 [ext_resource path="res://wanderController.gd" type="Script" id=3]
-[ext_resource path="res://Sprite/cat_temp_sit.png" type="Texture" id=4]
 [ext_resource path="res://Sprite/cat2_temp_sit.png" type="Texture" id=5]
 [ext_resource path="res://Sprite/cat2_temp.png" type="Texture" id=6]
-
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 600, 600 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 2 )
-region = Rect2( 600, 0, 600, 600 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
-region = Rect2( 1200, 0, 600, 600 )
-
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "sit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 6 )
@@ -70,19 +42,11 @@ height = 0.0
 collision_layer = 5
 script = ExtResource( 1 )
 
-[node name="Cat1" type="AnimatedSprite" parent="."]
-visible = false
-scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 6 )
-animation = "walk"
-frame = 2
-playing = true
-
-[node name="Cat2" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 7 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CatchArea" type="Area2D" parent="."]
