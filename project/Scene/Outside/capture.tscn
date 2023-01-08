@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite/capture.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Outside/Node2D.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 16, 4 )
+scale = Vector2( 0.379747, 0.344304 )
+texture = ExtResource( 1 )
