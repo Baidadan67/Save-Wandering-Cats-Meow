@@ -10,11 +10,11 @@ extends StaticBody2D
 var change_scene = false
 
 func _on_hurtbox_body_entered(body: PhysicsBody2D):
-	change_scene = true
+	if body.name == "player":
+		change_scene = true
 
 func _on_hurtbox_body_exited(body):
-	if body.name == "player":
-		change_scene = false
+	change_scene = false
 	
 func _process(delta):
 	if change_scene == true:
