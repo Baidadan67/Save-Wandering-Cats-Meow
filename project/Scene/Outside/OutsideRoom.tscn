@@ -3,14 +3,14 @@
 [ext_resource path="res://Scene/Outside/ObstacleGenerator.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Outside/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Outside/CatOutdoor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprite/outdoorBackground.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/outside.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Outside/ExitOutdoor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Outside/CatchCounter.tscn" type="PackedScene" id=6]
 
 [node name="OutsideRoom" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 512, 300 )
+[node name="Outside" type="Sprite" parent="."]
+position = Vector2( 511, 300 )
 texture = ExtResource( 4 )
 
 [node name="ObstacleGenerator" parent="." instance=ExtResource( 1 )]

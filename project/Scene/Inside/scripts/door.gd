@@ -18,5 +18,5 @@ func _on_hurtbox_body_exited(body):
 func _process(delta):
 	if change_scene == true:
 		if Input.is_action_just_pressed("ui_select"):
-			get_tree().change_scene("res://Scene/Inside/outside_test.tscn")
+			get_tree().change_scene("res://Scene/Outside/OutsideRoom.tscn")
 	

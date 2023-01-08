@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprite/capture.png" type="Texture" id=1]
-[ext_resource path="res://Scene/Outside/Node2D.gd" type="Script" id=2]
+[ext_resource path="res://Sprite/capture-removebg-preview (1).png" type="Texture" id=1]
+[ext_resource path="res://Script/Node2D.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 

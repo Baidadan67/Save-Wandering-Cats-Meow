@@ -1,16 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scene/Inside/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Inside/door.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Inside/indoorcats.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Inside/indoorobs.gd" type="Script" id=3]
+[ext_resource path="res://Sprite/insideroom.jpg" type="Texture" id=4]
 
 [node name="InsideRoom" type="Node2D"]
 position = Vector2( 1, 2 )
 
+[node name="Insideroom" type="Sprite" parent="."]
+position = Vector2( 512, 281 )
+scale = Vector2( 0.553243, 0.478526 )
+texture = ExtResource( 4 )
+
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 136, 178 )
+position = Vector2( 136, 397 )
 
 [node name="door" parent="." instance=ExtResource( 2 )]
-position = Vector2( 858, 421 )
+position = Vector2( 1008, 364 )
 
-[node name="indoorcats" parent="." instance=ExtResource( 3 )]
+[node name="indoorobs" type="Node2D" parent="."]
+script = ExtResource( 3 )
