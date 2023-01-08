@@ -4,21 +4,18 @@
 [ext_resource path="res://Sprite/player-removebg-preview.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 24.0
-height = 0.0
+radius = 20.0
+height = 24.0
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 236, 352 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 236, 0, 236, 352 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 472, 0, 236, 352 )
 
@@ -38,8 +35,8 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -4, -4 )
-scale = Vector2( 0.372881, 0.25 )
+position = Vector2( -1, -2 )
+scale = Vector2( 0.25, 0.252841 )
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scene/Inside/hurt_hit_box/hurtbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Window.gd" type="Script" id=2]
+[ext_resource path="res://Sprite/window.png" type="Texture" id=3]
+[ext_resource path="res://Sprite/catHead.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 133.5, 150 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 157.5, 168 )
+
+[node name="Window" type="StaticBody2D"]
+position = Vector2( -48, -15 )
+script = ExtResource( 2 )
+
+[node name="CatHead" type="Sprite" parent="."]
+position = Vector2( 7, -11 )
+scale = Vector2( 0.844375, 1.28989 )
+texture = ExtResource( 4 )
+
+[node name="Window" type="Sprite" parent="."]
+position = Vector2( -7, -15 )
+scale = Vector2( 0.724359, 0.715447 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 10.5, -3 )
+shape = SubResource( 1 )
+
+[node name="hurtbox" parent="." instance=ExtResource( 1 )]
+
+[node name="CollisionShape2D" parent="hurtbox" index="0"]
+position = Vector2( 6.5, 10 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+
+[editable path="hurtbox"]
