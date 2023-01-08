@@ -11,11 +11,14 @@ func _ready():
 	pass # Replace with function body.
 
 
-		
-func _on_ExitOutdoor_input_event(viewport, event, shape_idx):
-	if (event is InputEventMouseButton && event.pressed):
-		# print("Clicked")
-		get_tree().change_scene("res://Scene/Inside/InsideRoom.tscn")
+func _process(delta):
+	if Input.get_action_strength("ui_select"):
+		var indoor = indoors.instance()
+		add_child(indoor)
+#func _on_ExitOutdoor_input_event(viewport, event, shape_idx):
+	#if (event is InputEventMouseButton && event.pressed):
+	#	# print("Clicked")
+	#	get_tree().change_scene("res://Scene/Inside/InsideRoom.tscn")
 				
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
