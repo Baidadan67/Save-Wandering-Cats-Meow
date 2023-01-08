@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed = 200 # How fast the player will move (pixels/sec).
+export var speed = 100 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 export var velocity = Vector2.ZERO
 var rng = RandomNumberGenerator.new()
@@ -23,10 +23,10 @@ func _process(delta):
 	 # The player's movement vector.
 	if position.x == 0 or position.x == screen_size.x or position.y == 0 or position.y == screen_size.y:
 		velocity.x = rng.randf_range(-1.0,1.0)
-		velocity.y = rng.randf_range(-1.0,1.0)
+		velocity.y = rng.randf_range(-0.3,0.3)
 	if frame_count <= 0:
 		velocity.x = rng.randf_range(-1.0,1.0)
-		velocity.y = rng.randf_range(-1.0,1.0)
+		velocity.y = rng.randf_range(-0.3,0.3)
 		frame_count = 200 
 	else:
 		frame_count -= 1

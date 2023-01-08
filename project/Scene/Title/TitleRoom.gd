@@ -5,8 +5,10 @@ export var mainGamesence: PackedScene
 
 func _on_load_button_button_up():
 	print("load a game")
+	get_tree().change_scene(mainGamesence.resource_path)
 
 func _on_new_Button_button_up():
+	print("new game")
 	get_tree().change_scene(mainGamesence.resource_path)
 
 func _on_Instru_Button_button_up():
