@@ -5,6 +5,8 @@ var hSize = 64
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize() 
+	
 	position.x = 212 + hSize * (randi() % (600 / hSize))
 	position.y = vSize * (randi() % (600 / vSize))
 		

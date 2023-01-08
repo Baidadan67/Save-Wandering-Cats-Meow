@@ -31,13 +31,18 @@ func _physics_process(delta):
 			velocity = velocity.move_toward(direction * 500, ACCELERATION * delta)
 			velocity = move_and_slide(velocity)
 			print(direction)
+			$Cat2.animation =  "walk"
 		
 		WANDER:
 			direction = Vector2(rand_range(-1,1),rand_range(-1,1))
 			#direction = leave_wall(position,direction)
 			velocity = velocity.move_toward(direction * 200, ACCELERATION * delta)
 			velocity = move_and_slide(velocity)
+			$Cat2.animation =  "walk"
 			
+		_: 
+			$Cat2.animation =  "sit"
+
 
 	position.x = clamp(position.x, BOARDER[0] + SIZE[0] / 2, BOARDER[1] - SIZE[0] / 2)
 	position.y = clamp(position.y, BOARDER[2] + SIZE[0] / 2, BOARDER[3] - SIZE[0] / 2)
