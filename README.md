@@ -10,5 +10,5 @@ Contributers:
 |Hongyang Bai|Baidadan67|Baidadan#2794|
 |Yingyue Cao|yingyue3|yueyue#5809|
 |Yingying Xing|yingyingxing|Christina_Y#8086|
-|Lingrui Zhou|lingrui|Z Lily#2780|
-|Vivian Liang|catinthebox|The Cat#9098|
+|Lingrui Zhou|ling-rui|Z Lily#2780|
+|Vivian Liang|thecatinbox|The Cat#9098|
