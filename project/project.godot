@@ -14,6 +14,10 @@ config/name="Save Wandering Cats"
 run/main_scene="res://Scene/Title/TitleRoom.tscn"
 config/icon="res://Sprite/icon.png"
 
+[autoload]
+
+Global="*res://Scene/Title/Global.tscn"
+
 [display]
 
 window/size/resizable=false

@@ -16,41 +16,30 @@ func _ready():
 	randomize()
 
 func load_dat(screen_size):
-	var file = File.new()
-	file.open("res://save_game.dat", File.READ)
+	# Global.catList = []
 	var counter = 0
-	while (not file.eof_reached() and counter <= 5)  : # iterate through all lines until the end of file is reached
-		var line = file.get_line()
-		
-		#print(line)
+	for c in Global.catList: 
 		var cat = obscats.instance()
 		cat.position.x = rng.randi_range(0,screen_size.x) 
 		cat.position.y = rng.randi_range(2*(screen_size.y)/3,screen_size.y)
-		if line != "":
-			cat.color = line
-		#print(rng.randi_range(0,screen_size.x))
-		
-			add_child(cat)
-			counter += 1
-	file.close()
+		cat.color = c
+		add_child(cat)
+		counter += 1
 	return
 	
 	
 	
 func load_file(file, screen_size):
 
-	var f = File.new()
-	f.open(file, File.READ)
-	while not f.eof_reached(): # iterate through all lines until the end of file is reached
-		var line = f.get_line()
+	for c in Global.catList: 
 		#print(line)
 		var cat = obscats.instance()
 		cat.position.x = rng.randi_range(0,screen_size.x) 
 		cat.position.y = rng.randi_range(2*(screen_size.y)/3,screen_size.y)
-		cat.color = line
+		cat.color = c
 		#print(rng.randi_range(0,screen_size.x))
 		add_child(cat)
-	f.close()
+		
 	return
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

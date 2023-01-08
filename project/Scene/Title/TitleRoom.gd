@@ -9,10 +9,7 @@ func _on_load_button_button_up():
 
 func _on_new_Button_button_up():
 	# print("new game")
-	var file = File.new()
-	file.open("res://save_game.dat", File.WRITE)
-	file.store_line("")
-	file.close()
+	Global.catList = []
 	get_tree().change_scene(mainGamesence.resource_path)
 
 func _on_Instru_Button_button_up():	

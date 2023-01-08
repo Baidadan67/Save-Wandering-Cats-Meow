@@ -13,8 +13,6 @@ var counter = 100
 var max_counter = 100 
 var captures = load("res://Scene/Outside/capture.tscn")
 var fails = load("res://Scene/Outside/Fail.tscn")
-var file = File.new()
-
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -78,12 +76,5 @@ func _physics_process(delta):
 		modulate.a = 1
 
 func save(color):
-	var file = File.new()
-	file.open("res://save_game.dat", File.READ_WRITE)
-	var content = file.get_as_text()
-	print("content is")
-	print(content)
-	file.seek_end()
-	file.store_line("\n" + color)
-	file.close()
+	Global.catList.append(color)
 	return
