@@ -20,7 +20,7 @@ func load_file(file, screen_size):
 	f.open(file, File.READ)
 	while not f.eof_reached(): # iterate through all lines until the end of file is reached
 		var line = f.get_line()
-		print(line)
+		#print(line)
 		var cat = obscats.instance()
 		cat.position.x = rng.randi_range(0,screen_size.x) 
 		cat.position.y = rng.randi_range(2*(screen_size.y)/3,screen_size.y)

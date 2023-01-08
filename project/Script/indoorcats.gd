@@ -46,12 +46,12 @@ func _process(delta):
 	#velocity = move_and_slide(velocity)
 		$AnimatedSprite.play()
 	else:
-		$AnimatedSprite.stopp()
+		$AnimatedSprite.stop()
 	position += velocity * delta
 	
 		
 	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, screen_size.y/2, screen_size.y)
+	position.y = clamp(position.y, screen_size.y/3, screen_size.y)
 	if velocity.x < 0:
 		$AnimatedSprite.flip_h = true
 	else:
