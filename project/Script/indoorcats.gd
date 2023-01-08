@@ -16,7 +16,16 @@ func _ready():
 	rng.randomize()
 	frame_count = 0
 	randomize()
-	
+	if color == '1':
+		$AnimatedSprite.animation = "cat1"
+	elif color == '2':
+		$AnimatedSprite.animation = "cat2"
+	elif color == '3':
+		$AnimatedSprite.animation = "cat3"
+	elif color == '4':
+		$AnimatedSprite.animation = "cat4"
+	elif color == '5':
+		$AnimatedSprite.animation = "cat5"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
